@@ -31,6 +31,7 @@ keras.optimizers.Adamax ( lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, deca
 keras.optimizers.Nadam ( lr=0.001, beta_1=0.90, beta_2=0.99, schedule_decay=0.004 )
 
 Results:
+
 ![](images/05.png)
 
 
