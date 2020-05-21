@@ -14,6 +14,8 @@ Feature extraction is done by MFCC (Mel-Frequency Cepstral Components)
 ![](images/03.png)
 ![](images/04.png)
 
+Approx. 20% dataset is used for validation and 10% is used for testing.
+
 Experiment of LSTM Recurrent Neural Network based model:
 
 keras.optimizers.RMSprop ( rho=0.90, decay=0.00, lr=0.001 )
@@ -33,6 +35,8 @@ keras.optimizers.Nadam ( lr=0.001, beta_1=0.90, beta_2=0.99, schedule_decay=0.00
 Results:
 
 ![](images/05.png)
+
+
 
 
 
