@@ -2,6 +2,7 @@ This project classifies music based on three genres - Jazz, Classical and Folk m
 
 
 Pre-requisite: sox, ffmpeg
+
 Properties of each audio files after cropping – 4410Hz, 32 bits per sample, 160 kb/s bitrate,
 Stereo, 30 seconds long
 
