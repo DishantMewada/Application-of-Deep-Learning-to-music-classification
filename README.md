@@ -1,5 +1,11 @@
 This project classifies music based on three genres - Jazz, Classical and Folk music by using keras, libroza libraries in python. Highest accuracy in the matrix shows 87.5%. 
 
+Dataset used: RWC database (Jazz, Classical and folk music CDs)
+
+Duration: 
+Classical - 5 hours 29 minutes
+Jazz - 3 hours 41 minutes
+folk - 6 hours 46 minutes
 
 Pre-requisite: sox, ffmpeg
 
@@ -37,6 +43,11 @@ Results:
 ![](images/05.png)
 
 
+Future Scope:
+You can add music files into the dataset or 
+send me the music files (different dataset), I will create the model again and check the accuracy.
+
+Thank You.
 
 
 
