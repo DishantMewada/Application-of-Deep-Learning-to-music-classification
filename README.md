@@ -2,6 +2,7 @@ This project classifies music based on three genres - Jazz, Classical and Folk m
 
 Dataset used: RWC database (Jazz, Classical and folk music CDs)
 
+
 Duration: 
 
 Classical - 5 hours 29 minutes
@@ -9,6 +10,7 @@ Classical - 5 hours 29 minutes
 Jazz - 3 hours 41 minutes
 
 folk - 6 hours 46 minutes
+
 
 Pre-requisite: sox, ffmpeg
 
