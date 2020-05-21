@@ -7,5 +7,5 @@ Stereo, 30 seconds long
 
 
 Feature extraction is done by MFCC (Mel-Frequency Cepstral Components)
-
+![]{images/01.png}
 
