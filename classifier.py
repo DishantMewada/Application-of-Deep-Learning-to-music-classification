@@ -14,6 +14,8 @@ from keras.layers.recurrent import LSTM
 from keras.layers import Dense
 from keras.optimizers import SGD, Adagrad, Adadelta, Adamax, Nadam
 from FeatureExtraction import FeatureExtraction  # local python class with Audio feature extraction (librosa)
+import warnings
+warnings.filterwarnings('ignore')
 
 # Turn off TF verbose logging
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # or any {'0', '1', '2'}
@@ -60,13 +62,13 @@ model.save('model_SGD.h5')
 model.get_weights()
 model.optimizer
 
-start_train = time.clock()
+start_train = time.process_time()
 
 print("Training the model...")
 
 history = model.fit(genre_features.train_X, genre_features.train_Y, batch_size=batch_size, epochs=nb_epochs, verbose = 2, validation_split = 0.2, shuffle=True)
 
-print("Time taken to build a model: ",time.clock() - start_train,"Seconds")
+print("Time taken to build a model: ",time.process_time() - start_train,"Seconds")
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
@@ -127,13 +129,13 @@ model.save('model_Adagrad.h5')
 model.get_weights()
 model.optimizer
 
-start_train = time.clock()
+start_train = time.process_time()
 
 print("Training the model...")
 
 history = model.fit(genre_features.train_X, genre_features.train_Y, batch_size=batch_size, epochs=nb_epochs, verbose = 2, validation_split = 0.2, shuffle=True)
 
-print("Time taken to build a model: ",time.clock() - start_train,"Seconds")
+print("Time taken to build a model: ",time.process_time() - start_train,"Seconds")
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
@@ -195,13 +197,13 @@ model.save('model_Adadelta.h5')
 model.get_weights()
 model.optimizer
 
-start_train = time.clock()
+start_train = time.process_time()
 
 print("Training the model...")
 
 history = model.fit(genre_features.train_X, genre_features.train_Y, batch_size=batch_size, epochs=nb_epochs, verbose = 2, validation_split = 0.2, shuffle=True)
 
-print("Time taken to build a model: ",time.clock() - start_train,"Seconds")
+print("Time taken to build a model: ",time.process_time() - start_train,"Seconds")
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
@@ -262,13 +264,13 @@ model.save('model_Adamax.h5')
 model.get_weights()
 model.optimizer
 
-start_train = time.clock()
+start_train = time.process_time()
 
 print("Training the model...")
 
 history = model.fit(genre_features.train_X, genre_features.train_Y, batch_size=batch_size, epochs=nb_epochs, verbose = 2, validation_split = 0.2, shuffle=True)
 
-print("Time taken to build a model: ",time.clock() - start_train,"Seconds")
+print("Time taken to build a model: ",time.process_time() - start_train,"Seconds")
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
@@ -329,13 +331,13 @@ model.save('model_Nadam.h5')
 model.get_weights()
 model.optimizer
 
-start_train = time.clock()
+start_train = time.process_time()
 
 print("Training the model...")
 
 history = model.fit(genre_features.train_X, genre_features.train_Y, batch_size=batch_size, epochs=nb_epochs, verbose = 2, validation_split = 0.2, shuffle=True)
 
-print("Time taken to build a model: ",time.clock() - start_train,"Seconds")
+print("Time taken to build a model: ",time.process_time() - start_train,"Seconds")
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
