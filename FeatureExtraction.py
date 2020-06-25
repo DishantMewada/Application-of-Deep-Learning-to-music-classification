@@ -116,7 +116,7 @@ class FeatureExtraction:
             self.timeseries_length_list.append(math.ceil(len(y) / self.hop_len))
 
     def extract_audio_features(self, list_of_audiofiles):
-        start_feature_extraction = time.clock()
+        start_feature_extraction = time.process_time()
 
         #timeseries_length = min(self.timeseries_length_list)
         timeseries_length = 128
@@ -124,7 +124,7 @@ class FeatureExtraction:
         target = []
 
         for i, file in enumerate(list_of_audiofiles):
-            start_time = time.clock()
+            start_time = time.process_time()
             y, sr = librosa.load(file)
             mfcc = librosa.feature.mfcc(y=y, sr=sr, hop_length=self.hop_len, n_mfcc=13)
             spectral_center = librosa.feature.spectral_centroid(y=y, sr=sr, hop_length=self.hop_len)
@@ -141,9 +141,9 @@ class FeatureExtraction:
             data[i, :, 26:33] = spectral_contrast.T[0:timeseries_length, :]
 
             print("Features Extracted from %i of Music Track %i " % (i + 1, len(list_of_audiofiles)), end="", flush=True)
-            print("    Time: %.3f"% (time.clock() - start_time),"Seconds")
+            print("    Time: %.3f"% (time.process_time() - start_time),"Seconds")
 
-        print("Total Time: ",time.clock() - start_feature_extraction,"Seconds")
+        print("Total Time: ",time.process_time() - start_feature_extraction,"Seconds")
         return data, np.expand_dims(np.asarray(target), axis=1)
 
     def one_hot(self, Y_genre_strings):
