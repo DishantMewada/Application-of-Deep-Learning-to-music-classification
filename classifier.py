@@ -56,7 +56,7 @@ model.add(Dense(units=genre_features.train_Y.shape[1], activation='softmax'))
 
 print("Using Optimizer SGD()")
 print("Compiling the model...")
-model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.001), metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer=SGD(lr=0.001), metrics=["accuracy"])
 model.summary()
 model.save('model_SGD.h5')
 model.get_weights()
@@ -72,7 +72,7 @@ print("Time taken to build a model: ",time.process_time() - start_train,"Seconds
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
-plt.plot(history.history['acc']) #here I am trying to plot only accuracy, the same can be used for loss as well
+plt.plot(history.history['accuracy']) #here I am trying to plot only accuracy, the same can be used for loss as well
 plt.title('model accuracy')
 plt.plot(history.history['val_loss'])
 plt.ylabel('accuracy')
@@ -139,7 +139,7 @@ print("Time taken to build a model: ",time.process_time() - start_train,"Seconds
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
-plt.plot(history.history['acc']) #here I am trying to plot only accuracy, the same can be used for loss as well
+plt.plot(history.history['accuracy']) #here I am trying to plot only accuracy, the same can be used for loss as well
 plt.title('model accuracy')
 plt.plot(history.history['val_loss'])
 plt.ylabel('accuracy')
@@ -207,7 +207,7 @@ print("Time taken to build a model: ",time.process_time() - start_train,"Seconds
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
-plt.plot(history.history['acc']) #here I am trying to plot only accuracy, the same can be used for loss as well
+plt.plot(history.history['accuracy']) #here I am trying to plot only accuracy, the same can be used for loss as well
 plt.title('model accuracy')
 plt.plot(history.history['val_loss'])
 plt.ylabel('accuracy')
@@ -274,7 +274,7 @@ print("Time taken to build a model: ",time.process_time() - start_train,"Seconds
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
-plt.plot(history.history['acc']) #here I am trying to plot only accuracy, the same can be used for loss as well
+plt.plot(history.history['accuracy']) #here I am trying to plot only accuracy, the same can be used for loss as well
 plt.title('model accuracy')
 plt.plot(history.history['val_loss'])
 plt.ylabel('accuracy')
@@ -341,7 +341,7 @@ print("Time taken to build a model: ",time.process_time() - start_train,"Seconds
 
 
 print(history.history.keys()) # Displays keys from history, in my case loss,acc
-plt.plot(history.history['acc']) #here I am trying to plot only accuracy, the same can be used for loss as well
+plt.plot(history.history['accuracy']) #here I am trying to plot only accuracy, the same can be used for loss as well
 plt.title('model accuracy')
 plt.plot(history.history['val_loss'])
 plt.ylabel('accuracy')
