@@ -2,6 +2,7 @@ This project classifies music based on three genres - Jazz, Classical and Folk m
 
 
 Python 3.8.2 libraries: Librosa 0.7.2, Keras 2.4.3, Tensorflow 2.2.0, Scipy 1.5.0, Numba 0.48.0 
+
 Dataset used: RWC database (Jazz, Classical and folk music CDs)
 
 
